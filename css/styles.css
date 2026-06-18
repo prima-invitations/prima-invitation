@@ -1,0 +1,1004 @@
+h1,
+h2,
+h3,
+li,
+ul,
+p,
+a,
+img {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+}
+a {
+  line-height: 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.overflow {
+  overflow: hidden;
+}
+body {
+  background-image: url(../img/bg.png);
+}
+
+@font-face {
+  font-family: 'Antarctic';
+  src: url('../fonts/Antarctic.otf');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Конвертик */
+
+.hero__preloader {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation-fill-mode: forwards;
+  z-index: 10;
+}
+
+.hero__preloader--left {
+  animation-name: bg-left;
+  animation-delay: 0.7s;
+  animation-timing-function: ease-in;
+  animation-duration: 1.2s;
+}
+
+.hero__preloader--right {
+  inset-inline-start: -0.1rem;
+  transform-origin: right;
+  animation-name: bg-right;
+  animation-timing-function: ease-out;
+  animation-duration: 1.6s;
+  animation-delay: 0.3s;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.15));
+}
+
+.hero__seal {
+  position: fixed;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+@keyframes bg-right {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(-90deg);
+  }
+}
+@keyframes bg-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+
+/* Основная часть приглашения */
+
+.hero {
+   position: relative;
+   width: 480px;
+   height: 100vh;
+   margin: 0 auto;
+   border-bottom-left-radius: 60px;
+   border-bottom-right-radius: 60px;
+   z-index: 3;
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    height: 100%;
+  }
+}
+
+.hero-foto{
+   width: 100%;
+   height: 100%;
+   -o-object-fit: cover;
+   object-fit: cover;
+   -o-object-position: center;
+   object-position: center;
+   border-bottom-left-radius: 60px;
+   border-bottom-right-radius: 60px;
+}
+
+.hero-subtitle {
+   position: absolute;
+   top: 30px;
+   left: 50%;
+   transform: translateX(-50%);
+
+   font-size: 20px;
+   font-family: 'Poiret One', sans-serif;
+   text-align: center;
+   text-transform: uppercase;
+   line-height: 1.5em;
+   color: #ffffff;
+}
+
+.hero-title {
+   position: absolute;
+   top: 100px;
+   left: 50%;
+   transform: translateX(-50%);
+
+   font-family: 'Antarctic';
+   font-size: 50px;
+   font-weight: 400;
+   white-space: nowrap;
+   color: #ffffff;
+}
+
+
+
+
+/* Музыка */
+
+.music-text {
+  width: 300px;
+  text-align: center;
+  font-family: 'Poiret One', sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #43302A;
+
+  border-top: 1px solid #43302A;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.music-button {
+  display: block;
+  width: 140px;
+  padding: 20px 50px;
+  margin: 0 auto;
+  border: none;
+  background-color: transparent;
+  margin-bottom: 70px;
+}
+
+.music-play__first {
+  transform: translateX(2px);
+}
+
+
+
+
+
+
+.invitation {
+  position: relative;
+
+  width: 480px;
+  margin: 0 auto;
+  background-color: #D8D2C6;
+  background-image: url(../img/gipur.png);
+  margin-top: -50px;
+  padding-top: 50px;
+}
+
+.invitation-wrapper {
+   position: relative;
+  width: 420px;
+  margin: 0 auto;
+  padding: 100px 0 50px 0;
+  margin-top: -50px;
+  background-image: url(../img/bg.png);
+}
+
+.invitation-text {
+   font-size: 17px;
+   font-family: "Poiret One", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   text-align: center;
+   color: var(--primary-text-color);
+   white-space: nowrap;
+   color: #43302A;
+   margin-bottom: 30px;
+}
+
+.big-text{
+   text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+.calendar {
+  position: relative;
+
+  width: 480px;
+  margin: 0 auto;
+  background-color: #D8D2C6;
+  background-image: url(../img/gipur.png);
+}
+
+.calendar-wrapper {
+  position: relative;
+  width: 420px;
+  margin: 0 auto;
+  background-image: url(../img/bg.png);
+  padding: 40px 0 350px 0;
+}
+
+.calendar-small-flower {
+  width: 80px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.calendar-title {
+  font-family: 'Antarctic';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+  color: #43302A;
+  text-align: center;
+  line-height: 0.6em;
+  margin-bottom: 30px;
+}
+
+/* Стили календаря */
+
+.container {
+  position: relative;
+  z-index: 20;
+}
+
+.calendar__list {
+  padding-inline: 5rem;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-content: center;
+}
+
+.calendar__item {
+  position: relative;
+
+  font-family: "Poiret One", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  height: 2.3rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: #43302A;
+}
+
+.calendar__item--day {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  color: #43302A;
+  text-transform: uppercase;
+}
+
+.calendar__item--heart::before {
+  content: '';
+  position: absolute;
+  inset: -0.5rem;
+  transform: translateX(0.1rem);
+  background-image: url(../img/icons/heart.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top 0.1rem center;
+}
+
+.calendar-bottom-decor {
+  position: absolute;
+  bottom: 0;
+  width: 480px;
+  margin: 0 auto;
+}
+
+
+
+
+
+.location {
+  position: relative;
+
+  width: 480px;
+  margin: 0 auto;
+  background-image: url(../img/7.jpg);
+  background-size: cover;
+  padding: 50px 0 10px 0;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  margin-top: -50px;
+}
+
+.location-title {
+  font-family: 'Antarctic';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+  color: #43302A;
+  text-align: center;
+  line-height: 0.6em;
+  margin-bottom: 70px;
+  padding-top: 25px;
+}
+
+.location-text {
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+  color: #43302A;
+  margin-bottom: 20px;
+}
+
+.location-button {
+  display: block;
+  width: 220px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #43302A;
+  text-decoration: none;
+  border-bottom: 1px solid #43302A;
+  padding-bottom: 15px;
+}
+
+.location-flower {
+  width: 50px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.location-gipur {
+   width: 480px;
+   margin: 0 auto;
+   margin-bottom: 80px;
+}
+
+.container {
+   margin-bottom: 50px;
+}
+
+.timer__title {
+   font-family: 'Antarctic';
+   font-weight: 400;
+   text-align: center;
+   font-size: 70px;
+   color: #43302A;
+   line-height: 0.7em;
+   margin-bottom: 40px;
+}
+
+.timer__list {
+   list-style-type: none;
+   padding: 0 60px;
+   display: flex;
+   justify-content: space-between;
+   align-items: first baseline;
+}
+
+.timer__item {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  width: 5.5rem;
+}
+
+.timer__time, .timer__period, .timer__dots {
+   font-family: 'Poiret One', serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 35px;
+   text-align: center;
+   color: #43302A;
+}
+
+.timer__dots {
+   font-size: 40px;
+}
+
+.timer__period {
+   font-size: 20px;
+   text-transform: lowercase;
+}
+
+
+
+.timing {
+  position: relative;
+
+  width: 480px;
+  margin: 0 auto;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+}
+
+.timing-foto-wrapper {
+   width: 480px;
+   margin: 0 auto;
+   background-image: url(../img/7.jpg);
+   background-size: cover;
+}
+
+.timing-top-foto {
+   width: 440px;
+   margin: 0 auto;
+}
+
+.programm-wrapper {
+   width: 480px;
+   margin: 0 auto;
+   background-image: url(../img/7.jpg);
+   background-size: cover;
+}
+
+.timing-title {
+  font-family: 'Antarctic';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  color: #43302A;
+  text-align: center;
+  line-height: 0.8em;
+  margin-bottom: 70px;
+  padding-top: 100px;
+}
+
+.timing-list {
+  list-style-type: none;
+  padding: 0 70px 70px 70px;
+}
+
+.timing-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.timing-img {
+  width: 20px;
+}
+
+.timing-date {
+  font-family: "Poiret One", sans-serif;
+  font-size: 20px;
+  color: #43302A;
+  margin-bottom: 10px;
+}
+
+.timing-subtitle {
+  font-family: "Poiret One", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #43302A;
+  margin-bottom: 5px;
+}
+
+.timing-text {
+  font-family: "Poiret One", sans-serif;
+  font-size: 17px;
+  color: #43302A;
+}
+
+.timing-foto { 
+   position: relative;
+   z-index: 4;
+   width: 480px;
+   margin: 0 auto;
+   border-bottom-left-radius: 60px;
+   border-bottom-right-radius: 60px;
+}
+
+
+
+
+
+
+
+
+.dresscode {
+  position: relative;
+
+  width: 480px;
+  margin: 0 auto;
+  background-color: #D8D2C6;
+  background-image: url(../img/gipur.png);
+  margin-top: -50px;
+}
+
+.dresscode-wrapper {
+  position: relative;
+  width: 420px;
+  margin: 0 auto;
+  background-image: url(../img/bg.png);
+  padding: 150px 0 10px 0;
+  z-index: 3;
+}
+
+.dresscode-title {
+   font-family: 'Antarctic';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+  color: #43302A;
+  text-align: center;
+  line-height: 0.6em;
+  margin-bottom: 70px;
+}
+
+.dresscode-text {
+   font-family: "Poiret One", sans-serif;
+  font-size: 17px;
+  color: #43302A;
+  text-align: center;
+  padding: 0 50px;
+  margin-bottom: 40px;
+}
+
+.dresscode-list {
+   display: flex;
+   flex-wrap: wrap;
+   list-style-type: none;
+   width: 320px;
+   margin: 0 auto;
+   gap: 5px;
+   margin-bottom: 50px;
+}
+
+.dresscode-item {
+   width: 60px;
+   height: 40px;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.dresscode-item:nth-child(1) {
+   background-image: url(../img/item3.jpg);
+}
+.dresscode-item:nth-child(6) {
+   background-image: url(../img/item2.jpg);
+}
+.dresscode-item:nth-child(11) {
+   background-image: url(../img/item1.jpg);
+}
+.dresscode-item:nth-child(12) {
+   background-image: url(../img/item4.jpg);
+}
+.dresscode-item:nth-child(7) {
+   background-image: url(../img/item5.jpg);
+}
+.dresscode-item:nth-child(2) {
+   background-image: url(../img/item6.jpg);
+}
+.dresscode-item:nth-child(13) {
+   background-image: url(../img/item7.jpg);
+}
+.dresscode-item:nth-child(8) {
+   background-image: url(../img/item8.jpg);
+}
+.dresscode-item:nth-child(3) {
+   background-image: url(../img/item9.jpg);
+}
+.dresscode-item:nth-child(14) {
+   background-image: url(../img/item10.jpg);
+}
+.dresscode-item:nth-child(9) {
+   background-image: url(../img/item11.jpg);
+}
+.dresscode-item:nth-child(4) {
+   background-image: url(../img/item12.jpg);
+}
+.dresscode-item:nth-child(15) {
+   background-image: url(../img/item13.jpg);
+}
+.dresscode-item:nth-child(10) {
+   background-image: url(../img/item14.jpg);
+}
+.dresscode-item:nth-child(5) {
+   background-image: url(../img/item15.jpg);
+}
+
+.gallery-top-foto {
+   width: 320px;
+   height: 125px;
+   margin: 0 auto;
+   margin-bottom: 5px;
+}
+
+.foto {
+   width: 100%;
+   height: 100%;
+   -o-object-fit: cover;
+   object-fit: cover;
+   -o-object-position: center;
+   object-position: center;
+}
+
+.gallery-fotos-wrapper {
+   display: flex;
+   width: 320px;
+   gap: 5px;
+   margin: 0 auto;
+   margin-bottom: 5px;
+}
+
+.gallery-left-foto {
+   width: 157.5px;
+   height: 100px;
+}
+
+.gallery-right-foto {
+   width: 157.5px;
+   height: 100px;
+}
+
+
+
+
+
+
+
+.wishes {
+  width: 480px;
+  margin: 0 auto;
+  background-color: #D8D2C6;
+  background-image: url(../img/gipur.png);
+}
+
+.wishes-wrapper {
+  width: 420px;
+  margin: 0 auto;
+  background-image: url(../img/bg.png);
+  padding: 120px 0 0 0;
+}
+
+.wishes-flower {
+   width: 50px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+.registration {
+  position: relative;
+
+  width: 480px;
+  margin: 0 auto;
+  padding-bottom: 120px;
+  background-color: #D8D2C6;
+  background-image: url(../img/gipur.png);
+}
+
+.registration-wrapper {
+  position: relative;
+  width: 420px;
+  margin: 0 auto;
+  background-image: url(../img/bg.png);
+  padding: 120px 0 150px 0;
+  z-index: 2;
+
+  border-bottom-left-radius: 190px;
+  border-bottom-right-radius: 190px;
+}
+
+.registration-title {
+   font-family: 'Antarctic';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 70px;
+  color: #43302A;
+  text-align: center;
+  line-height: 0.6em;
+  margin-bottom: 70px;
+}
+
+.registration-text {
+   font-family: "Poiret One", sans-serif;
+  font-size: 17px;
+  color: #43302A;
+  text-align: center;
+  padding: 0 50px;
+  margin-bottom: 40px;
+}
+
+.registration-form {
+   width: 350px;
+   margin: 0 auto;
+   margin-bottom: 60px;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  color: #43302A;
+  padding: 2px 15px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #43302A;
+}
+
+.form-input-bottom {
+  margin-bottom: 15px;
+}
+
+.form-input::placeholder {
+  font-family: "Poiret One", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #43302A;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #43302A;
+  margin-bottom: 20px;
+}
+
+.checkbox-input:checked + .custom-checkbox > .checkbox-icon {
+  display: block;
+}
+
+.custom-checkbox {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #43302A;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 15px;
+  height: 15px;
+  background-color: #43302A;
+  border-radius: 50%;
+}
+
+.registration-btn {
+  font-family: "Poiret One", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #43302A;
+  text-transform: uppercase;
+
+  width: 100%;
+  height: 40px;
+  border: 1px solid #43302A;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.registration-candle {
+  width: 80px;
+  margin: 0 auto;
+}
+
+
+
+
+.registration-bottom-text {
+  font-family: "Poiret One", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #43302A;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.registration-bottom-btn {
+  display: block;
+  text-decoration: none;
+  font-family: "Poiret One", sans-serif;
+  font-size: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #43302A;
+
+  border-bottom: 1px solid #43302A;
+  width: 200px;
+  padding-bottom: 15px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+
+
+
+
+
+.footer-flower {
+  position: absolute;
+  bottom: -20px;
+  right: 10px;
+
+  width: 270px;
+}
+
+.footer-bottom-decor {
+  position: absolute;
+  bottom: 0;
+  width: 480px;
+  z-index: 3;
+}
+
+.footer-container {
+   padding-top: 100px;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+.footer__social {
+  display: flex;
+}
+
+.footer__link {
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem;
+
+  font-family: 'Poiret One', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: #43302A;
+  margin-bottom: 10px;
+}
+
+.thanks {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #faf6f3;
+  padding-inline: 20px;
+  background-image: url(../img/thanks-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.thanks::before {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  background-color: rgba(250, 246, 243, 0.65);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.thanks .container {
+  min-width: 100%;
+}
+
+.thanks__title {
+  position: relative;
+  font-size: 50px;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.thanks__desc {
+  position: relative;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 10px;
+}
+
+.thanks__logo {
+  position: relative;
+  display: block;
+  margin: 20px auto;
+}
+
+.thanks__link {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 60px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 4px;
+
+  background-color: #514940;
+  color: #ffffff;
+
+  font-size: 17px;
+  font-weight: 400;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.wishes__title {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 30px;
+  color: #453020;
+  margin-bottom: 20px;
+}
+
+.wishes__text {
+  font-family: 'Poiret One', serif;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+  color: #453020;
+  margin-bottom: 30px;
+}
