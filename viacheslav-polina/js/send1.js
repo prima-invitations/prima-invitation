@@ -26,7 +26,7 @@ document.querySelector('.registration-form').addEventListener('submit', function
 
   // Отправляем данные на Google Таблицы
   fetch(
-    'https://script.google.com/macros/s/AKfycbyP6zq9dfClwHxiu_laezjygjS1zJaGke1fTbtwuBiRCT2lAZzrI9v-cBXqYTPz3MQAEw/exec',
+    'https://script.google.com/macros/s/AKfycbyYQe7z1CqvhUIpFHF05pRepFFPKL2GFQlEc7H_6dzU5Fa2U0c4TzvejyLYhjwKflcNIg/exec',
     {
       method: 'POST',
       body: formData,
