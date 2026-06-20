@@ -36,7 +36,7 @@ document.querySelector('.registration-form').addEventListener('submit', function
     .then((data) => {
       // Если все прошло успешно, перенаправляем на YouTube
       if (data.result === 'success') {
-        window.location.href = 'https://prima-invitations.vercel.app/viacheslav-polina/thanks.html';
+        window.location.href = 'https://prima-invitations.vercel.app/evgenii-anna/thanks.html';
       } else {
         // Если ошибка, восстанавливаем кнопку и показываем сообщение об ошибке
         submitButton.disabled = false;
