@@ -590,7 +590,7 @@ canvas {
 
 .wrapper::before,
 .wrapper::after {
-  /* content: ''; */
+  content: '';
   position: fixed;
   top: 0;
   left: 0;
