@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
     playButton.classList.toggle('active');
 
     if (playButton.classList.contains('active')) {
-      document.querySelector('.music-play').setAttribute('src', 'img/icons/pause.svg');
+      document.querySelector('.music-play').setAttribute('src', 'https://prima-invitations.vercel.app/grigoriy-daria/img/icons/pause.svg');
       audio.play();
     } else {
-      document.querySelector('.music-play').setAttribute('src', 'img/icons/play.svg');
+      document.querySelector('.music-play').setAttribute('src', 'https://prima-invitations.vercel.app/grigoriy-daria/img/icons/play.svg');
       audio.pause();
     }
   });
