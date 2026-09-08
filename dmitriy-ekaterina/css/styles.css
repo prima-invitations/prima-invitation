@@ -226,7 +226,6 @@ canvas {
 .location-foto-thumb {
   margin-top: 80px;
   width: 480px;
-  height: 600px;
 }
 
 .taming {
@@ -350,22 +349,23 @@ canvas {
 .dresscode-list {
   list-style-type: none;
   display: flex;
-  gap: 5px;
+  justify-content: center;
+  gap: 15px;
   width: 375px;
   margin: 0 auto;
 }
 
 .dresscode-item {
-  width: 90px;
-  height: 35px;
+  width: 130px;
+  height: 45px;
 }
 
 .dresscode-item:nth-child(1) {
-  background-color: #EAE6DA;
+  background-color: rgb(233 229 218);
 }
 
 .dresscode-item:nth-child(2) {
-  background-color: #DBCBB1;
+  background-color: rgb(213 196 177);
 }
 
 .dresscode-item:nth-child(3) {
