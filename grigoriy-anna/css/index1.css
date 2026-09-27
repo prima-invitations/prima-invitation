@@ -106,8 +106,9 @@ body {
 }
 
 .title {
-  font-size: 4rem;
-  font-family: 'Mories';
+  font-size: 5rem;
+  /* font-family: 'Mories'; */
+  font-family: "Great Vibes", cursive;
   text-align: center;
   font-weight: 400;
 }
@@ -465,10 +466,11 @@ body {
 }
 
 .register__text {
-  margin-top: 8rem;
-  font-size: 1.4rem;
+  margin-top: 2.4rem;
+  font-size: 1.8rem;
   line-height: 1.4;
   text-align: center;
+  padding-inline: 4rem;
 }
 
 .register__name {
