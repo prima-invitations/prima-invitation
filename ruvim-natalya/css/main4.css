@@ -62,7 +62,7 @@ body {
    overflow: hidden;
 }
 
-/* body {
+body {
    overflow: hidden;
 }
 
@@ -112,7 +112,7 @@ body {
 .cover-button.hidden {
    opacity: 0;
    pointer-events: none;
-} */
+}
 
 /* Основная часть приглашения */
 

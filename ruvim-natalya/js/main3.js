@@ -3,29 +3,29 @@ AOS.init({
   once: true
 });
 
-// const coverButton = document.querySelector('.cover-button');
-// const poster = document.querySelector('.poster');
-// const video = document.querySelector('.video');
+const coverButton = document.querySelector('.cover-button');
+const poster = document.querySelector('.poster');
+const video = document.querySelector('.video');
 
-// coverButton.addEventListener('click', () => {
-//   // Видео начинает играть сразу
-//   video.currentTime = 0;
-//   // video.playbackRate = 0.9;
-//   video.play();
+coverButton.addEventListener('click', () => {
+  // Видео начинает играть сразу
+  video.currentTime = 0;
+  // video.playbackRate = 0.9;
+  video.play();
 
-//   // Постер плавно исчезает поверх видео
-//   poster.classList.add('hidden');
-// }, { once: true });
+  // Постер плавно исчезает поверх видео
+  poster.classList.add('hidden');
+}, { once: true });
 
-// video.addEventListener('ended', () => {
-//   coverButton.classList.add('hidden');
-//   document.body.style.overflow = 'auto';
+video.addEventListener('ended', () => {
+  coverButton.classList.add('hidden');
+  document.body.style.overflow = 'auto';
 
-//   // Чтобы после анимации убрать элемент полностью
-//   coverButton.addEventListener('transitionend', () => {
-//     coverButton.style.display = 'none';
-//   }, { once: true });
-// });
+  // Чтобы после анимации убрать элемент полностью
+  coverButton.addEventListener('transitionend', () => {
+    coverButton.style.display = 'none';
+  }, { once: true });
+});
 
 document.querySelector('.registration-form').addEventListener('submit', function (event) {
   event.preventDefault(); // Отменяем стандартную отправку формы
