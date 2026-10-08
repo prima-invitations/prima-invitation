@@ -1,0 +1,944 @@
+h1,
+h2,
+h3,
+li,
+ul,
+p,
+a,
+img {
+   margin: 0;
+   padding: 0;
+}
+
+img {
+   display: block;
+}
+
+a {
+   line-height: 0;
+}
+
+.visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   border: 0;
+   padding: 0;
+
+   white-space: nowrap;
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
+
+.overflow {
+   overflow: hidden;
+}
+
+body {
+   background-image: url(../img/background.jpg);
+}
+
+
+@font-face {
+   font-family: 'January';
+   src: url('../fonts/January.otf');
+   font-weight: 400;
+   font-display: swap;
+   font-style: normal;
+}
+
+
+
+
+
+
+/* Конвертик */
+
+.wrapper {
+   max-width: 480px;
+   margin: 0 auto;
+   overflow: hidden;
+}
+
+/* body {
+   overflow: hidden;
+}
+
+.cover-button {
+   position: fixed;
+   inset: 0;
+   z-index: 100;
+   padding: 0;
+   border: none;
+   width: 100%;
+   height: 100vh;
+   background: transparent;
+   cursor: pointer;
+
+   transition: opacity .5s ease;
+   background-image: url(../img/background.jpg);
+}
+
+.poster,
+.video {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+}
+
+.poster {
+   z-index: 2;
+   opacity: 1;
+   transition: opacity .5s ease;
+}
+
+.poster.hidden {
+   opacity: 0;
+}
+
+.video {
+   z-index: 1;
+}
+
+.cover-button {
+   transition: opacity .5s ease;
+}
+
+.cover-button.hidden {
+   opacity: 0;
+   pointer-events: none;
+} */
+
+/* Основная часть приглашения */
+
+.hero {
+   position: relative;
+   width: 480px;
+   height: 100vh;
+   margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+   .hero {
+      height: 1000px;
+   }
+}
+
+/* .hero-foto-thumb {
+   position: absolute;
+   top: 0;
+   left: 0;
+
+   width: 480px;
+   height: 100%;
+} */
+
+.hero-foto-thumb {
+   position: absolute;
+   bottom: 0px;
+   left: 0;
+   width: 480px;
+   height: 65%;
+}
+
+.hero-foto {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: bottom;
+}
+
+/* .top-blur-img {
+   position: absolute;
+   top: 0;
+   width: 480px;
+   opacity: 70%;
+} */
+
+/* .hero-blur {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 20%;
+} */
+
+.hero-text-wrapper {
+   position: absolute;
+   top: 120px;
+   width: 100%;
+}
+
+.hero-title {
+   font-family: "Great Vibes", cursive;
+   font-size: 60px;
+   font-weight: 400;
+   line-height: 1em;
+   text-align: center;
+   color: #836a40;
+   margin-bottom: 20px;
+}
+
+.hero-date {
+   font-family: "Cormorant Garamond", serif;
+   font-size: 30px;
+   text-align: center;
+   color: #836a40;
+   letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+.invitation {
+   width: 480px;
+   margin: 0 auto;
+   padding: 100px 0 40px 0;
+}
+
+.invitation-title {
+   font-family: "Great Vibes", cursive;
+   font-size: 50px;
+   font-weight: 400;
+   text-align: center;
+   line-height: 1em;
+   color: #836a40;
+   margin-bottom: 30px;
+}
+
+.invitation-text {
+   font-family: "Cormorant Garamond", serif;
+   font-size: 20px;
+   text-align: center;
+   color: #836a40;
+   margin-bottom: 10px;
+}
+
+.invitation-foto {
+   width: 480px;
+   margin: 0 auto;
+   margin-top: 60px;
+   margin-bottom: 70px;
+}
+
+.invitation-line {
+   width: 250px;
+   height: 1px;
+   margin: 0 auto;
+   background-color: #836a40;
+   opacity: 15%;
+   margin-bottom: 30px;
+}
+
+.invitation-icon {
+   width: 100px;
+   margin: 0 auto;
+}
+
+
+
+
+
+
+
+/* Таймер */
+
+.timer {
+   width: 480px;
+   margin: 0 auto;
+   padding: 70px 0;
+}
+
+.timer-container {
+   margin-bottom: 50px;
+}
+
+.timer__title {
+   font-family: "Great Vibes", cursive;
+   font-size: 45px;
+   font-weight: 400;
+   text-align: center;
+   line-height: 1em;
+   color: #836a40;
+   margin-bottom: 30px;
+}
+
+.timer__list {
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 60px;
+}
+
+.timer__item {
+   width: 5.5rem;
+   text-align: center;
+}
+
+.timer__number {
+   position: relative;
+   overflow: hidden;
+   height: 42px;
+}
+
+.timer__digit {
+   position: absolute;
+   inset: 0;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   font-family: "Great Vibes", cursive;
+   font-size: 35px;
+   color: #836a40;
+
+   transition:
+      transform .45s cubic-bezier(.22, .61, .36, 1),
+      opacity .45s cubic-bezier(.22, .61, .36, 1);
+}
+
+.timer__digit.current {
+   transform: translateY(0);
+   opacity: 1;
+}
+
+.timer__digit.next {
+   transform: translateY(100%);
+   opacity: 0;
+}
+
+.timer__number.animate .current {
+   transform: translateY(-100%);
+   opacity: 0;
+}
+
+.timer__number.animate .next {
+   transform: translateY(0);
+   opacity: 1;
+}
+
+.timer__period {
+   margin-top: 6px;
+   font-family: "Cormorant Garamond", serif;
+   font-size: 20px;
+   color: #836a40;
+}
+
+.timer__dots {
+   width: 1px;
+   height: 50px;
+   background: #c4b49e;
+}
+
+.location {
+   width: 480px;
+   margin: 0 auto;
+   padding: 80px 0;
+   background-color: #b6996d;
+}
+
+.location-title {
+   font-family: "Great Vibes", cursive;
+   font-size: 55px;
+   font-weight: 400;
+   text-align: center;
+   line-height: 1em;
+   color: #ffffff;
+   margin-bottom: 50px;
+}
+
+.location-wrapper {
+   width: 370px;
+   height: 600px;
+   margin: 0 auto;
+   /* padding-top: 40px; */
+   /* background-color: #FFF6E5; */
+   display: grid;
+   align-content: center;
+   gap: 90px;
+   background-color: #ffffff;
+   border-radius: 10px;
+   box-shadow: 10px 10px 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.location-img {
+   width: 300px;
+   margin: 0 auto;
+   margin-bottom: 20px;
+}
+
+.location-text {
+   font-family: "Great Vibes", cursive;
+   font-size: 40px;
+   font-weight: 400;
+   text-align: center;
+   line-height: 1em;
+   color: #836a40;
+   margin-bottom: 10px;
+}
+
+.location-button {
+   display: block;
+   width: 240px;
+   margin: 0 auto;
+
+   font-family: "Cormorant Garamond", serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 20px;
+   text-align: center;
+   color: #836a40;
+   text-decoration: none;
+   border: 1px solid #836a40;
+   border-radius: 10px;
+   padding: 20px 15px;
+   /* margin-bottom: 45px; */
+}
+
+
+
+
+
+
+
+
+.timing {
+   width: 480px;
+   margin: 0 auto;
+   padding: 100px 0;
+}
+
+.timing__title {
+   font-family: "Great Vibes", cursive;
+   font-size: 55px;
+   font-weight: 400;
+   text-align: center;
+   line-height: 1em;
+   color: #836a40;
+   margin-bottom: 15px;
+}
+
+.timing-date {
+   font-family: "Cormorant Garamond", serif;
+   font-size: 25px;
+   letter-spacing: 1px;
+   text-align: center;
+   color: #836a40;
+   margin-bottom: 30px;
+}
+
+.timing__list {
+   list-style-type: none;
+}
+
+.timing__item {
+   width: 370px;
+   height: 370px;
+   margin: 0 auto;
+   /* background-color: #FFF6E5; */
+   background-color: #ffffff;
+   border-radius: 10px;
+   box-shadow: 10px 10px 15px 15px rgba(0, 0, 0, 0.3);
+   margin-bottom: 50px;
+   padding: 30px 0;
+}
+
+.big-padd {
+   padding: 50px 0;
+}
+
+.timing-icon {
+   width: 150px;
+   margin: 0 auto;
+   margin-bottom: 20px;
+}
+
+.timing__time {
+   font-family: "Great Vibes", cursive;
+   font-size: 40px;
+   font-weight: 400;
+   text-align: center;
+   line-height: 1em;
+   color: #836a40;
+   margin-bottom: 20px;
+}
+
+.timing__event {
+   font-family: "Cormorant Garamond", serif;
+   font-size: 20px;
+   text-align: center;
+   color: #836a40;
+}
+
+.timing-line {
+   width: 250px;
+   height: 1px;
+   margin: 0 auto;
+   background-color: #836a40;
+   opacity: 15%;
+   margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+.dresscode {
+   width: 480px;
+   margin: 0 auto;
+   margin-bottom: 50px;
+}
+
+.dresscode-title {
+   font-family: "Great Vibes", cursive;
+   font-size: 55px;
+   font-weight: 400;
+   text-align: center;
+   line-height: 1em;
+   color: #836a40;
+   margin-bottom: 50px;
+}
+
+.dresscode-text {
+   font-family: "Cormorant Garamond", serif;
+   font-size: 20px;
+   text-align: center;
+   color: #836a40;
+   margin-bottom: 40px;
+}
+
+.dresscode-list {
+   list-style-type: none;
+   display: flex;
+   justify-content: space-between;
+   gap: 3px;
+   width: 362px;
+   margin: 0 auto;
+   margin-bottom: 50px;
+}
+
+.dresscode-item {
+   width: 70px;
+   height: 70px;
+   border-radius: 50%;
+}
+
+.dresscode-item:nth-child(1) {
+   background-color: #F2D7DC;
+}
+
+.dresscode-item:nth-child(2) {
+   background-color: #D49AAE;
+}
+
+.dresscode-item:nth-child(3) {
+   background-color: #A8788E;
+}
+
+.dresscode-item:nth-child(4) {
+   background-color: #6B4A5E;
+}
+
+.dresscode-item:nth-child(5) {
+   background-color: #3E2A3A;
+}
+
+
+
+
+
+
+.wishes {
+   width: 480px;
+   margin: 0 auto;
+   background-image: url(../img/wishes-bg.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding: 70px 0;
+}
+
+.wishes-wrapper {
+   width: 370px;
+   height: 430px;
+   margin: 0 auto;
+   padding-top: 50px;
+   background-color: #ffffff;
+   border: 1px solid #836a40;
+   border-radius: 10px;
+   box-shadow: 10px 10px 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.wishes-title {
+   font-family: "Great Vibes", cursive;
+   font-size: 55px;
+   font-weight: 400;
+   text-align: center;
+   line-height: 1em;
+   color: #836a40;
+   margin-bottom: 50px;
+}
+
+.wishes-text {
+   font-family: "Cormorant Garamond", serif;
+   font-size: 18px;
+   text-align: center;
+   color: #836a40;
+   margin-bottom: 40px;
+}
+
+
+
+
+.decor {
+   width: 120px;
+   margin: 40px auto;
+}
+
+
+
+
+
+
+.registration {
+   width: 480px;
+   margin: 0 auto;
+   background-color: #b6996d;
+   padding: 80px 0;
+}
+
+.registration-title {
+   font-family: "Great Vibes", cursive;
+   font-size: 55px;
+   font-weight: 400;
+   text-align: center;
+   line-height: 1em;
+   color: #ffffff;
+   margin-bottom: 50px;
+}
+
+.registration-wrapper {
+   width: 420px;
+   margin: 0 auto;
+   padding: 30px 10px;
+   background-color: #ffffff;
+   border-radius: 10px;
+   box-shadow: 10px 10px 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.registration-text {
+   font-family: "Cormorant Garamond", serif;
+   font-size: 20px;
+   text-align: center;
+   color: #836a40;
+   margin-bottom: 50px;
+}
+
+.registration-form {
+   border-radius: 20px;
+   background-color: #F6F2EC;
+   padding: 40px 30px;
+}
+
+.form-input {
+   width: 100%;
+   height: 50px;
+   font-size: 20px;
+   padding: 5px 15px;
+   border: none;
+   outline: none;
+   background-color: #ffffff;
+   margin-bottom: 10px;
+}
+
+.form-input::placeholder {
+   font-family: "Cormorant Garamond", serif;
+   font-size: 18px;
+   color: #836a40;
+   opacity: 50%;
+}
+
+.mg {
+   margin-top: 30px;
+   margin-bottom: 15px;
+   text-align: left;
+   font-size: 18px;
+}
+
+.checkbox-label {
+   display: flex;
+   align-items: center;
+   font-family: "Cormorant Garamond", serif;
+   font-size: 18px;
+   color: #918d88;
+   margin-top: 20px;
+}
+
+.checkbox-input:checked+.custom-checkbox>.checkbox-icon {
+   display: block;
+}
+
+.custom-checkbox {
+   position: relative;
+   display: block;
+   width: 20px;
+   height: 20px;
+   background-color: #ffffff;
+   border-radius: 50%;
+   margin-right: 15px;
+}
+
+.checkbox-icon {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: none;
+   width: 15px;
+   height: 15px;
+   background-color: #836a40;
+   border-radius: 50%;
+}
+
+.registration-btn {
+   display: block;
+   width: 240px;
+   margin: 40px auto 70px auto;
+
+   font-family: "Cormorant Garamond", serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 20px;
+   text-align: center;
+   color: #836a40;
+   text-decoration: none;
+   border: 1px solid #836a40;
+   background-color: transparent;
+   padding: 10px;
+   border-radius: 10px;
+}
+
+
+
+
+
+
+.details-title {
+   font-family: "Great Vibes", cursive;
+   font-size: 35px;
+   font-weight: 400;
+   text-align: center;
+   line-height: 1em;
+   color: #836a40;
+   margin-bottom: 30px;
+   margin-top: 70px;
+}
+
+.details-text {
+   font-family: "Cormorant Garamond", serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 20px;
+   text-align: center;
+   color: #836a40;
+   margin-bottom: 20px;
+}
+
+.small-size {
+   text-transform: none;
+   margin-bottom: 20px;
+   font-size: 18px;
+   color: #918d88;
+}
+
+
+
+
+
+
+
+
+.footer {
+   position: relative;
+
+   width: 480px;
+   margin: 0 auto;
+   padding: 70px 0 290px 0;
+}
+
+.footer-img {
+   width: 120px;
+   margin: 0 auto;
+   margin-bottom: 40px;
+}
+
+.footer-bible-text {
+   font-family: "Cormorant Garamond", serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 22px;
+   text-align: center;
+   color: #836a40;
+   margin-bottom: 30px;
+}
+
+.footer-text {
+   font-family: "Great Vibes", cursive;
+   font-size: 50px;
+   font-weight: 400;
+   text-align: center;
+   line-height: 1em;
+   color: #836a40;
+}
+
+.footer-container {
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   display: grid;
+   justify-content: center;
+   justify-items: center;
+}
+
+.footer__social {
+   display: flex;
+}
+
+.footer__link {
+   font-size: 1.8rem;
+   text-decoration: none;
+   font-weight: 600;
+   padding: 0.5rem;
+
+   font-family: "Cormorant Garamond", serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 18px;
+   color: #836a40;
+   margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.thanks {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   background-color: #faf6f3;
+   padding-inline: 20px;
+   background-image: url(../img/thanks-bg.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+.thanks::before {
+   content: '';
+   position: absolute;
+   inset: 20px;
+   background-color: rgba(250, 246, 243, 0.65);
+   -webkit-backdrop-filter: blur(5px);
+   backdrop-filter: blur(5px);
+   border-radius: 5px;
+}
+
+.thanks .container {
+   min-width: 100%;
+}
+
+.thanks__title {
+   position: relative;
+   font-size: 50px;
+   letter-spacing: 1px;
+   line-height: 1;
+   font-weight: 300;
+   text-align: center;
+   margin-bottom: 40px;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.thanks__desc {
+   position: relative;
+   font-size: 20px;
+   line-height: 1.4;
+   text-align: center;
+   font-family: 'Montserrat', sans-serif;
+   margin-bottom: 10px;
+}
+
+.thanks__logo {
+   position: relative;
+   display: block;
+   margin: 20px auto;
+}
+
+.thanks__link {
+   position: relative;
+   display: grid;
+   align-items: center;
+   justify-content: center;
+   width: 300px;
+   height: 60px;
+   margin: 0 auto;
+   text-align: center;
+   border-radius: 4px;
+
+   background-color: #514940;
+   color: #ffffff;
+
+   font-size: 17px;
+   font-weight: 400;
+   text-decoration: none;
+   font-family: 'Montserrat', sans-serif;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+}
+
+
+
+
+.wishes__title {
+   font-family: 'Playfair Display', serif;
+   text-align: center;
+   font-size: 30px;
+   color: #453020;
+   margin-bottom: 20px;
+}
+
+.wishes__text {
+   font-family: 'Poiret One', serif;
+   font-size: 20px;
+   line-height: 1.4;
+   text-align: center;
+   color: #453020;
+   margin-bottom: 30px;
+}

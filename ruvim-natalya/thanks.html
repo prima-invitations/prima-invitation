@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Спасибо за ответ!</title>
+
+  <meta name="description" content="Спасибо за ваш ответ. Будем рады разделить этот особенный день вместе с вами." />
+
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" />
+
+  <style>
+    :root {
+      --bg: #f7f5f1;
+      --surface: #fbfaf8;
+      --text: #252421;
+      --text-secondary: #77736d;
+      --border: rgba(37, 36, 33, 0.14);
+      --accent: #8d8274;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+    }
+
+    .thanks {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100svh;
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    .thanks::before,
+    .thanks::after {
+      content: '';
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      filter: blur(2px);
+      pointer-events: none;
+    }
+
+    .thanks::before {
+      top: -260px;
+      right: -180px;
+      border: 1px solid var(--border);
+    }
+
+    .thanks::after {
+      bottom: -300px;
+      left: -160px;
+      border: 1px solid var(--border);
+    }
+
+    .thanks__content {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 520px;
+      text-align: center;
+      animation: show 0.9s ease both;
+    }
+
+    .thanks__icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 38px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+    }
+
+    .thanks__icon::before {
+      content: '';
+      width: 7px;
+      height: 12px;
+      margin-top: -3px;
+      border-right: 1.5px solid var(--text);
+      border-bottom: 1.5px solid var(--text);
+      transform: rotate(45deg);
+    }
+
+    .thanks__label {
+      margin: 0 0 18px;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 1.4;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+    }
+
+    .thanks__title {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(48px, 10vw, 72px);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.035em;
+    }
+
+    .thanks__title span {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .thanks__line {
+      width: 40px;
+      height: 1px;
+      margin: 32px auto;
+      background-color: var(--accent);
+    }
+
+    .thanks__text {
+      max-width: 400px;
+      margin: 0 auto;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+
+    .thanks__button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-height: 52px;
+      margin-top: 42px;
+      padding: 14px 28px;
+      border: 1px solid var(--text);
+      color: var(--surface);
+      background-color: var(--text);
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: 0.16em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease;
+    }
+
+    .thanks__button::after {
+      content: '→';
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1;
+      transition: transform 0.3s ease;
+    }
+
+    .thanks__button:hover {
+      color: var(--text);
+      background-color: transparent;
+      transform: translateY(-2px);
+    }
+
+    .thanks__button:hover::after {
+      transform: translateX(4px);
+    }
+
+    .thanks__button:active {
+      transform: translateY(0);
+    }
+
+    .thanks__brand {
+      margin: 52px 0 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 12px;
+      font-style: italic;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+    }
+
+    @keyframes show {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .thanks {
+        padding: 40px 24px;
+      }
+
+      .thanks__icon {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 32px;
+      }
+
+      .thanks__title {
+        font-size: 52px;
+      }
+
+      .thanks__text {
+        max-width: 320px;
+        font-size: 14px;
+      }
+
+      .thanks__button {
+        width: 100%;
+        margin-top: 36px;
+      }
+
+      .thanks__brand {
+        margin-top: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="thanks">
+
+    <div class="thanks__content">
+
+      <div class="thanks__icon"></div>
+
+      <p class="thanks__label">
+        Ответ успешно отправлен
+      </p>
+
+      <div class="thanks__line"></div>
+
+      <p class="thanks__text">
+        Мы получили ваш ответ.<br>
+        С нетерпением ждём возможности разделить
+        этот особенный день вместе с вами.
+      </p>
+
+      <a class="thanks__button" href="https://prima-invitations.vercel.app/ruvim-natalya/">
+        Вернуться к приглашению
+      </a>
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>
