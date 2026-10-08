@@ -187,12 +187,44 @@
                   бы
                   поздравить
                   нас, <br> вы можете воспользоваться <br>
-                  ссылкой ниже</p>
-               <a class="location-button" data-aos="zoom-in" data-aos-duration="2000"
-                  href="tel:+79291216169">Поздравить</a>
+                  ссылкой ниже для перевода по номеру телефона</p>
+               <button type="button" class="location-button wishes-copy">
+                  Скопировать номер
+               </button>
                <div class="invitation-line"></div>
             </div>
          </section>
+
+         <script>
+            const copyButton = document.querySelector('.wishes-copy');
+
+            if (copyButton) {
+               let copyTimeout;
+
+               copyButton.addEventListener('click', async () => {
+                  try {
+                     await navigator.clipboard.writeText('+79291216169');
+
+                     clearTimeout(copyTimeout);
+
+                     copyButton.textContent = 'Номер скопирован ✓';
+
+                     copyTimeout = setTimeout(() => {
+                        copyButton.textContent = 'Скопировать номер';
+                     }, 4000);
+
+                  } catch (error) {
+                     copyButton.textContent = 'Не удалось скопировать';
+
+                     clearTimeout(copyTimeout);
+
+                     copyTimeout = setTimeout(() => {
+                        copyButton.textContent = 'Скопировать номер';
+                     }, 4000);
+                  }
+               });
+            }
+         </script>
 
          <img class="decor" src="img/icons/vase.svg" alt="">
 
